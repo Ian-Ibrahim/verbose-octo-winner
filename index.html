@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style/main.css">
+  <script src="https://kit.fontawesome.com/b2d1a2836c.js" crossorigin="anonymous"></script>
+  <title>Ian Okova</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito&family=Roboto:ital,wght@1,100;1,300&display=swap" rel="stylesheet">
+  <style></style>
+</head>
+
+<body class="main-content">
+  <div id="my-body">
+    
+    <section id="home" class="home-hero">
+      <header class="header">
+        <div class="logo">
+          <p>I<span id="disappear">an</span>O<span id="disappear">kova</span> <div class="square"></div> </p>
+        </div>
+        <nav id="nav">
+         
+          <ul>
+            <li><a href="#about" class="hvr-underline-from-center">About</a></li>
+            <li><a href="#portfolio" class="hvr-underline-from-center">portfolio</a></li>
+            <li><a href="#contact" class="hvr-underline-from-center">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <script>
+        
+        const header=document.querySelector("header");
+        const sectionOne = document.querySelector('.home-hero');
+        const options = {
+          rootMargin:'-90% 0px 0px 0px'
+        };
+
+        const observer = new IntersectionObserver(function
+            (entries, observer){
+            entries.forEach(entry => {
+              if(!entry.isIntersecting){
+             header.classList.add("nav-scrolled");
+           }else{
+             header.classList.remove("nav-scrolled");
+           }
+            console.log(entry);
+            });
+        }, options);
+
+        observer.observe(sectionOne);
+      </script>
+      <div class="container home-hero-item1"></div>
+      <div class="container home-hero-item2">
+        <div class="home-hero-textbox">
+          <p>
+            <span class="hello">Hello</span>
+            <span class="title">i'm <strong>ian okova</strong></span>
+            a freelance web developer from Nairobi,Kenya
+          </p>
+          <a href="#contact" class="button button-accent hvr-sweep-to-bottom">Hire me</a>
+          <div class="socials">
+            <a href="tel:+254114095616" class="social-media-icons"> <i class="fas fa-phone"></i></a>
+            <a href="mailto: ianokova@gmail.com" class="social-media-icons"><i class="fas fa-envelope"></i></a>
+            <a href="https://twitter.com/IanOkova" class="social-media-icons"><i class="fab fa-twitter"></i></a>
+            <a href="https://wa.me/254114095616" class="social-media-icons"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container">
+      <h2>About <span>Me</span> </h2>
+      <section id="about">
+        <div class="about-item">
+          I am a Front End developer who is currently a College student. I have working knowledge on HTML, CSS and javascript. I have also some experience with PHP and mySql.
+        </div>
+
+        <div class="about-item"></div>
+        <div class="about-item">
+          <div class="about-icon-container">
+            <h3>Skills</h3>
+            <p>Proficient in HTML,CSS, javascript.
+              <br>Basic understanding of PHPand mySQL</p>
+          </div>
+          <div class="about-icon-container">
+            <h3>Education</h2>
+            <p>Currently undertaking my undergraduate Computer Science course.</p>
+          </div>
+          <div class="about-icon-container">
+            <h3>Hobbies</h3>
+            <p>I enjoy coding, travelling, playing video games and occasionally I play football</p>
+          </div>
+          <div class="about-icon-container">
+            <h3>Personal</h3>
+            <p>A 20 year old from Nairobi,Kenya</p>
+          </div>
+          <!-- <a href="http://" class="button button-dark hvr-sweep-to-left">Download my resume </a> -->
+        </div>
+      </section>
+    </div>
+    <div class="container">
+      <section id="portfolio">
+        <h2>My <span>Works</span></h2>
+        <div class="port-container">
+          <div class="port-item-container">
+            <div class="port-item">
+              <img src="images/christopher-gower-m_HRfLhgABo-unsplash.jpg" class="port-image" alt="">
+              <div class="port-desc">
+                <h3>Lerav Online store website</h3>
+                Created using HTML,CSS,Javascript. It is set to be launched after a few months. You can have a sneak of how it looks.
+                <a href="testke1234.netlify.app"class="button button-accent port-item-button ">Open Project</a>
+              </div>
+            </div>
+          </div>
+          <div class="port-item-container">
+            <div class="port-item">
+              <img src="images/niclas-illg-wzVQp_NRIHg-unsplash.jpg" class="port-image" alt="">
+              <div class="port-desc">
+                <h3>Food ordering system</h3>
+                Created using HTML,CSS,javascript and php. MySql was used to create its database
+                <a href="https://github.com/Ian-Ibrahim/dejabrew"class="button button-accent port-item-button ">Open Project</a>
+              </div>
+            </div>
+          </div>
+          
+        
+        </div>
+      </section>
+    </div>
+    <div class="container">
+      
+      <section id="contact">
+        <div class="contact-item socials">
+          <p>
+            <h2>reach me at:</h2>
+            <a href="mailto: ianokova@gmail.com" class="reach-items">IANOKOVA@GMAIL.COM</a><br>
+            <a href="tel:+254114095616" class="reach-items">+254 114 095616</a>
+            <br>
+            <span class="contact-desc">
+              Nice to meet you! If you want to keep in touch, send me a message using my email or phone details above, or use this form right here! 
+            </span> 
+            <div class="freelance-links">
+              <span>or</span>
+              <h3>Hire me on</h4>
+          <a href="https://www.peopleperhour.com/freelancer/ian-okova-web-developer-qwqzqwn?ref=hireme&rfrd=5651569.2" class="button button-dark hvr-sweep-to-left">People per hour </a>
+          <!-- <a href="http://" class="button button-dark hvr-sweep-to-left">Fiverr </a>  -->
+
+            </div>
+          </p>
+            <a href="mailto: ianokova@gmail.com" class="social-icons"><i class="fas fa-envelope"></i></a>
+            <a href="https://twitter.com/IanOkova" class="social-icons"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.youtube.com/channel/UCrdRPXdMp0vZtod7nGub8zA" class="social-icons"><i
+              class="fab fa-youtube"></i></a>
+            <a href="https://wa.me/254114095616" class="social-icons"><i class="fas fa-phone"></i></a>
+        </div>
+        <form action="" class="contact-item contact-form" name="contact-form" method="POST" data-netlify="true">
+          <h2>Leave  message</h2>
+          <input type="hidden" name="_redirect" value="false" />
+          <div class="page">
+            <label class="field field_v2">
+              <input class="field__input" placeholder="e.g. Stanislav">
+              <span class="field__label-wrap">
+                <span class="field__label">First name</span>
+              </span>
+            </label>
+            <label class="field field_v2">
+              <input class="field__input" placeholder="e.g. Melnikov">
+              <span class="field__label-wrap">
+                <span class="field__label">Last name</span>
+              </span>
+            </label>    
+            <label class="field field_v2">
+              <input class="field__input" placeholder="someone@gmail.com">
+              <span class="field__label-wrap">
+                <span class="field__label">E-mail</span>
+              </span>
+            </label>
+            <div class="message-area">
+              <label for="message">Your message</label>
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Your message here....."></textarea>
+            </div>
+            
+          </div>
+          
+          <button type="submit" class="button button-dark hvr-sweep-to-left">Submit</button>
+        </form>
+        
+      </section>
+    </div>
+    <div class="footer-container">
+      <section id="footer">
+        <footer class="footer">
+          <a href="#home">
+            <div class="nav-to-top">
+              <i class="fa fa-chevron-up" aria-hidden="true"></i>
+            </div>
+         </a>
+          <span class="signature">Ian Okova</span> <br>
+         2021 &#169; All rights reserved.
+        </footer>
+      </section>
+    </div>
+    
+  </div>
+</body>
+</html>
